@@ -1,0 +1,305 @@
+/* تنظیم کل صفحه */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tahoma', sans-serif;
+    background: #f0f5f0; /* سفید متمایل به سبز روشن برای تم */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* قاب فرم */
+.container {
+    background: #ffffff; /* سفید */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 360px;
+}
+
+/* تیتر */
+h2 {
+    color: #2e3d20; /* سبز تیره و کمی مشکی */
+    margin-bottom: 25px;
+    font-size: 22px; /* بدون تغییر */
+    font-weight: 500; /* medium */
+}
+
+/* فیلد ورودی */
+input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #8fbc8f; /* سبز زیتونی روشن */
+    font-size: 16px;
+    font-weight: 500; /* کمی بولد */
+    color: #000000; /* مشکی */
+    text-align: center; /* وسط چین شدن متن */
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]::placeholder {
+    color: #555555; /* رنگ خاکستری ملایم برای placeholder */
+    font-weight: 500;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    border-color: #6b8e23; /* زیتونی روشن‌تر هنگام فوکوس */
+    outline: none;
+}
+
+/* دکمه ارسال */
+button {
+    width: 100%;
+    padding: 10px; /* ارتفاع کمتر */
+    border-radius: 10px;
+    border: none;
+    background: #6b8e23; /* زیتونی روشن و متمایل به سبز */
+    color: white;
+    font-size: 18px; /* بدون تغییر */
+    font-weight: 600; /* کمی بولدتر */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #8fbf5f; /* سبز روشن‌تر هنگام هاور */
+}
+
+.profile-page {
+    background: #fdfdf5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* قاب فرم */
+.profile-page .container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    width: 360px;
+    text-align: center;
+}
+
+/* تیتر */
+.profile-page h2 {
+    color: #6b8e23;
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* بخش‌ها */
+.profile-page .section {
+    margin-bottom: 30px;
+}
+
+.profile-page .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2e3d20; /* سبز تیره و کمی مشکی */
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+/* گزینه‌های پوست */
+.profile-page .skin-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profile-page .skin-option {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #8fbc8f;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+.profile-page .skin-option.selected {
+    background: #6b8e23;
+    color: white;
+}
+
+/* چک‌باکس */
+.profile-page .right-checkbox {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* دکمه */
+.profile-page button {
+    background: #6b8e23;
+}
+
+/* ===== HOME PAGE ===== */
+.home-page {
+    margin: 0;
+    height: 100vh;
+    background: #f0f5f0; /* ست با login و otp */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Tahoma', sans-serif;
+}
+
+.home-wrapper {
+    text-align: center;
+}
+
+.home-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2e3d20; /* سبز تیره و کمی مشکی */
+    margin-bottom: 33px;
+
+    white-space: nowrap;   /* مهم‌ترین خط */
+    direction: rtl;
+}
+
+.start-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #6b8e23;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.start-btn:hover {
+    background: #8fbf5f;
+}
+
+/* ===== CSS اختصاصی صفحه routine.html برای وب‌اپ ===== */
+body.routine-page {
+    background-color: #fdfdf5; /* پس‌زمینه گرم و خنثی برای وب‌اپ */
+    font-family: Tahoma, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    direction: rtl;
+}
+
+/* کانتینر اصلی */
+body.routine-page .container {
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    line-height: 1.7;
+}
+
+/* عنوان اصلی */
+body.routine-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6b8e23;
+    font-size: 28px;
+}
+
+/* عنوان بخش‌ها */
+body.routine-page h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    font-size: 22px;
+    border-bottom: 2px solid #e0e0e0;
+    text-align: right;
+}
+
+/* تم‌بندی صبح و شب */
+body.routine-page h2.morning {
+    color: #FFA500;
+}
+
+body.routine-page h2.night {
+    color: #4a7c3f;
+}
+
+/* لیست‌ها */
+body.routine-page ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* آیتم‌های روتین */
+body.routine-page li {
+    background-color: #f7f7f7;
+    margin-bottom: 12px;
+    padding: 14px 18px 14px 28px;
+    border-radius: 12px;
+    position: relative;
+    font-size: 16px;
+    transition: background 0.2s ease;
+    text-align: right;
+
+    /* مهم برای فارسی + انگلیسی */
+    direction: rtl;
+    unicode-bidi: plaintext;
+}
+
+body.routine-page li:hover {
+    background-color: #e8f5e9;
+}
+
+/* نشانگر مینیمال جایگزین ایموجی */
+body.routine-page li::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 12px;
+    height: calc(100% - 24px);
+    width: 4px;
+    background-color: #6b8e23;
+    border-radius: 4px;
+}
+
+/* واکنشگرا */
+@media screen and (max-width: 640px) {
+    body.routine-page .container {
+        padding: 20px;
+    }
+
+    body.routine-page h1 {
+        font-size: 24px;
+    }
+
+    body.routine-page h2 {
+        font-size: 20px;
+    }
+
+    body.routine-page li {
+        font-size: 15px;
+        padding: 12px 16px 12px 26px;
+    }
+}
+
+/* قطعی برای عدد + SPF */
+body.routine-page .ltr-fix {
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+    white-space: nowrap;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>روتین پوستی</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== کم CSS برای روتین ===== */
+        .routine-page .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            font-family: Tahoma, sans-serif;
+            line-height: 1.6;
+        }
+
+        .routine-page h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #6b8e23;
+        }
+
+        .routine-page h2 {
+            margin-top: 20px;
+            color: #4a7c3f;
+        }
+
+        .routine-page ul {
+            list-style: disc inside;
+            margin: 10px 0 20px 0;
+            padding: 0;
+        }
+
+        .routine-page li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body class="routine-page">
+
+    <div class="container">
+        <h1>روتین پوستی شما</h1>
+
+        <h2>☀️ روتین صبح</h2>
+        <ul id="morningRoutine"></ul>
+
+        <h2>🌙 روتین شب</h2>
+        <ul id="nightRoutine"></ul>
+    </div>
+
+    <script src="routine.js"></script>
+</body>
+</html>

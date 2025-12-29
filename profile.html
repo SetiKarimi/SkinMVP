@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>پروفایل پوستی</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="profile-page">
+
+<div class="container">
+    <h2>پروفایل پوستی</h2>
+
+    <form id="skinForm">
+
+        <div class="section">
+            <div class="section-title">نوع پوست</div>
+            <div class="skin-options">
+                <div class="skin-option" data-value="dry">خشک</div>
+                <div class="skin-option" data-value="normal">نرمال</div>
+                <div class="skin-option" data-value="oily">چرب</div>
+                <div class="skin-option" data-value="combination">مختلط</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">حساسیت پوستی</div>
+            <label class="right-checkbox">
+                <input type="checkbox" id="sensitive">
+                پوست حساسی دارم
+            </label>
+        </div>
+
+        <button type="submit">ذخیره پروفایل</button>
+    </form>
+</div>
+
+<script>
+const options = document.querySelectorAll('.skin-option');
+let selectedSkin = "";
+
+options.forEach(option => {
+    option.addEventListener('click', () => {
+        options.forEach(o => o.classList.remove('selected'));
+        option.classList.add('selected');
+        selectedSkin = option.dataset.value;
+    });
+});
+
+document.getElementById("skinForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    if (!selectedSkin) {
+        alert("لطفاً نوع پوست را انتخاب کنید");
+        return;
+    }
+
+    const skinProfile = {
+        skinType: selectedSkin,
+        sensitive: document.getElementById("sensitive").checked
+    };
+
+    localStorage.setItem("skinProfile", JSON.stringify(skinProfile));
+
+    window.location.href = "routine.html";
+});
+</script>
+
+</body>
+</html>

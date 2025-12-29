@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>ورود</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>ایمیل یا شماره موبایل خود را وارد کنید</h2>
+        <form id="loginForm">
+            <input type="text" id="email" placeholder="ایمیل یا شماره موبایل" required>
+            <button type="submit">ارسال کد</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            const input = document.getElementById("email").value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^09\d{9}$/;
+            if(emailRegex.test(input) || phoneRegex.test(input)){
+                window.location.href = "otp.html";
+            } else {
+                alert("فرمت ایمیل یا شماره موبایل صحیح نیست");
+            }
+        });
+    </script>
+</body>
+</html>
